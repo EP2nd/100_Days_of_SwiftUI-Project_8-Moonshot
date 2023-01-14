@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80939FA2972C2DE00B6461D /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80939F92972C2DE00B6461D /* AstronautView.swift */; };
 		B815E5CE29703D7E00B0BCD3 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E5CD29703D7E00B0BCD3 /* MoonshotApp.swift */; };
 		B815E5D029703D7E00B0BCD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E5CF29703D7E00B0BCD3 /* ContentView.swift */; };
 		B815E5D229703D8000B0BCD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B815E5D129703D8000B0BCD3 /* Assets.xcassets */; };
@@ -17,9 +18,11 @@
 		B8E70B172971854100A56B58 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E70B162971854100A56B58 /* Bundle-Decodable.swift */; };
 		B8E70B1B2971884800A56B58 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E70B1A2971884800A56B58 /* Mission.swift */; };
 		B8E70B1D2971AF6300A56B58 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E70B1C2971AF6300A56B58 /* Color-Theme.swift */; };
+		B8E70B1F297203AD00A56B58 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E70B1E297203AD00A56B58 /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B80939F92972C2DE00B6461D /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 		B815E5CA29703D7E00B0BCD3 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B815E5CD29703D7E00B0BCD3 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		B815E5CF29703D7E00B0BCD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		B8E70B162971854100A56B58 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		B8E70B1A2971884800A56B58 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		B8E70B1C2971AF6300A56B58 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		B8E70B1E297203AD00A56B58 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,7 @@
 			children = (
 				B815E5CD29703D7E00B0BCD3 /* MoonshotApp.swift */,
 				B8E70B182971868400A56B58 /* Extensions */,
-				B815E5CF29703D7E00B0BCD3 /* ContentView.swift */,
+				B8E70B202972083600A56B58 /* Views */,
 				B8E70B19297186B000A56B58 /* Objects */,
 				B815E5D129703D8000B0BCD3 /* Assets.xcassets */,
 				B8E70B102971834A00A56B58 /* astronauts.json */,
@@ -99,6 +103,16 @@
 				B8E70B1A2971884800A56B58 /* Mission.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		B8E70B202972083600A56B58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B815E5CF29703D7E00B0BCD3 /* ContentView.swift */,
+				B8E70B1E297203AD00A56B58 /* MissionView.swift */,
+				B80939F92972C2DE00B6461D /* AstronautView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E70B1F297203AD00A56B58 /* MissionView.swift in Sources */,
 				B8E70B15297184C600A56B58 /* Astronaut.swift in Sources */,
+				B80939FA2972C2DE00B6461D /* AstronautView.swift in Sources */,
 				B8E70B1D2971AF6300A56B58 /* Color-Theme.swift in Sources */,
 				B815E5D029703D7E00B0BCD3 /* ContentView.swift in Sources */,
 				B815E5CE29703D7E00B0BCD3 /* MoonshotApp.swift in Sources */,
