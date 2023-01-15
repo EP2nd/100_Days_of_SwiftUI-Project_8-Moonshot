@@ -12,6 +12,8 @@
 		B815E5D029703D7E00B0BCD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B815E5CF29703D7E00B0BCD3 /* ContentView.swift */; };
 		B815E5D229703D8000B0BCD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B815E5D129703D8000B0BCD3 /* Assets.xcassets */; };
 		B815E5D529703D8000B0BCD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B815E5D429703D8000B0BCD3 /* Preview Assets.xcassets */; };
+		B81FD0F829748C2D0037CD62 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FD0F729748C2D0037CD62 /* DividerView.swift */; };
+		B81FD0FA29748DB00037CD62 /* CrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81FD0F929748DB00037CD62 /* CrewView.swift */; };
 		B8E70B122971834A00A56B58 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = B8E70B102971834A00A56B58 /* astronauts.json */; };
 		B8E70B132971834A00A56B58 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = B8E70B112971834A00A56B58 /* missions.json */; };
 		B8E70B15297184C600A56B58 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E70B14297184C600A56B58 /* Astronaut.swift */; };
@@ -28,6 +30,8 @@
 		B815E5CF29703D7E00B0BCD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B815E5D129703D8000B0BCD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B815E5D429703D8000B0BCD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B81FD0F729748C2D0037CD62 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		B81FD0F929748DB00037CD62 /* CrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewView.swift; sourceTree = "<group>"; };
 		B8E70B102971834A00A56B58 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		B8E70B112971834A00A56B58 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		B8E70B14297184C600A56B58 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				B815E5CF29703D7E00B0BCD3 /* ContentView.swift */,
 				B8E70B1E297203AD00A56B58 /* MissionView.swift */,
 				B80939F92972C2DE00B6461D /* AstronautView.swift */,
+				B81FD0F929748DB00037CD62 /* CrewView.swift */,
+				B81FD0F729748C2D0037CD62 /* DividerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,9 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8E70B1F297203AD00A56B58 /* MissionView.swift in Sources */,
+				B81FD0F829748C2D0037CD62 /* DividerView.swift in Sources */,
 				B8E70B15297184C600A56B58 /* Astronaut.swift in Sources */,
 				B80939FA2972C2DE00B6461D /* AstronautView.swift in Sources */,
 				B8E70B1D2971AF6300A56B58 /* Color-Theme.swift in Sources */,
+				B81FD0FA29748DB00037CD62 /* CrewView.swift in Sources */,
 				B815E5D029703D7E00B0BCD3 /* ContentView.swift in Sources */,
 				B815E5CE29703D7E00B0BCD3 /* MoonshotApp.swift in Sources */,
 				B8E70B1B2971884800A56B58 /* Mission.swift in Sources */,

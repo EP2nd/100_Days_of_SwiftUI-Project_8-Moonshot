@@ -14,6 +14,8 @@ struct MissionView: View {
         let astronaut: Astronaut
     }
     
+    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
+    
     let mission: Mission
     let crew: [CrewMember]
     
@@ -33,19 +35,17 @@ struct MissionView: View {
                         .padding(.top)
                     
                     VStack(alignment: .leading) {
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightBackground)
-                            .padding(.vertical)
+                        /// Challenge 2:
+                        DividerView()
+                        
                         Text("Mission Highlights")
                             .font(.title.bold())
                             .padding(.bottom, 5)
                         
                         Text(mission.description)
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightBackground)
-                            .padding(.vertical)
+                        
+                        /// Challenge 2:
+                        DividerView()
                         
                         Text("Crew")
                             .font(.title.bold())
@@ -53,36 +53,8 @@ struct MissionView: View {
                     }
                     .padding(.horizontal)
                     
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(crew, id: \.role) { crewMember in
-                                NavigationLink {
-                                    AstronautView(astronaut: crewMember.astronaut)
-                                } label: {
-                                    HStack(spacing: -10) {
-                                        Image(crewMember.astronaut.id)
-                                            .resizable()
-                                            .frame(width: 149.76, height: 103.68)
-                                            .clipShape(Circle())
-                                            .overlay(
-                                                Circle()
-                                                    .strokeBorder(crewMember.role == "Commander" || crewMember.role == "Command Pilot" ? .yellow : .gray, lineWidth: 2)
-                                            )
-                                        
-                                        VStack(alignment: .leading) {
-                                            Text(crewMember.astronaut.name)
-                                                .foregroundColor(.white)
-                                                .font(.headline)
-                                            Text(crewMember.role)
-                                                .foregroundColor(.secondary)
-                                        }
-                                        .padding(.leading)
-                                    }
-                                    .padding(.trailing)
-                                }
-                            }
-                        }
-                    }
+                    /// Challenge 2:
+                    CrewView(mission: mission, astronauts: astronauts)
                 }
                 .padding(.bottom)
             }
