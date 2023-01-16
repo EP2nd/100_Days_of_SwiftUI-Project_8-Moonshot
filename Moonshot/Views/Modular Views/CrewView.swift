@@ -11,13 +11,7 @@ import SwiftUI
 
 struct CrewView: View {
     
-    struct CrewMember {
-        let astronaut: Astronaut
-        let role: String
-    }
-    
-    let mission: Mission
-    let crew: [CrewMember]
+    let crew: [MissionView.CrewMember]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -51,26 +45,11 @@ struct CrewView: View {
             }
         }
     }
-    
-    init(mission: Mission, astronauts: [String: Astronaut]) {
-        self.mission = mission
-        
-        self.crew = mission.crew.map { member in
-            if let astronaut = astronauts[member.name] {
-                return CrewMember(astronaut: astronaut, role: member.role)
-            } else {
-                fatalError("\(member.name)")
-            }
-        }
-    }
 }
 
 struct CrewView_Previews: PreviewProvider {
     
-    static let missions: [Mission] = Bundle.main.decode("missions.json")
-    static let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
-    
     static var previews: some View {
-        CrewView(mission: missions[0], astronauts: astronauts)
+        CrewView(crew: [])
     }
 }

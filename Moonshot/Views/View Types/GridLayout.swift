@@ -15,8 +15,6 @@ struct GridLayout: View {
         GridItem(.adaptive(minimum: 150))
     ]
     
-    @State private var gridView = true
-    
     let missions: [Mission]
     let astronauts: [String: Astronaut]
     
@@ -58,12 +56,6 @@ struct GridLayout: View {
         }
         .background(.darkBackground)
     }
-    
-    init(missions: [Mission], astronauts: [String: Astronaut]) {
-        self.missions = missions
-        
-        self.astronauts = astronauts
-    }
 }
 
 struct GridLayout_Previews: PreviewProvider {
@@ -73,5 +65,6 @@ struct GridLayout_Previews: PreviewProvider {
     
     static var previews: some View {
         GridLayout(missions: missions, astronauts: astronauts)
+            .preferredColorScheme(.dark)
     }
 }

@@ -31,9 +31,19 @@ struct MissionView: View {
                         .padding(.top)
                     
                     /// Challenge 1:
-                    Text(mission.formattedLaunchDate)
+                    /* Text(mission.formattedLaunchDate)
                         .font(.title.monospacedDigit())
-                        .padding(.top)
+                        .padding(.top) */
+                    
+                    /// More aesthetic solution:
+                    if let date = mission.launchDate {
+                        Label(date.formatted(date: .complete, time: .omitted), systemImage: "calendar")
+                            .padding(.top)
+                    } else {
+                        Text("N/A")
+                            .font(.title.monospacedDigit())
+                            .padding(.top)
+                    }
                     
                     VStack(alignment: .leading) {
                         /// Challenge 2:
@@ -55,7 +65,7 @@ struct MissionView: View {
                     .padding(.horizontal)
                     
                     /// Challenge 2:
-                    CrewView(mission: mission, astronauts: astronauts)
+                    CrewView(crew: crew)
                 }
                 .padding(.bottom)
             }

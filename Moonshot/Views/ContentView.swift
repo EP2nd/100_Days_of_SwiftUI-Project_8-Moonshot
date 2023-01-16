@@ -13,7 +13,7 @@ struct ContentView: View {
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     
     /// Challenge 3:
-    @State private var showingGrid = true
+    @AppStorage("ViewType") private var showingGrid = true
     
     var body: some View {
         NavigationView {
@@ -28,8 +28,12 @@ struct ContentView: View {
             /// Challenge 3:
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(showingGrid ? "List View" : "Grid View", action: toggleView)
-                        .foregroundColor(.white)
+                    Button {
+                        showingGrid.toggle()
+                    } label: {
+                        Label(showingGrid ? "List View" : "Grid View", systemImage: showingGrid ? "list.dash" : "square.grid.2x2")
+                    }
+                    .foregroundColor(.white)
                 }
             }
             .navigationTitle("Moonshot")
