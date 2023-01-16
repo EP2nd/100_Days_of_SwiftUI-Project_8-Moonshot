@@ -10,14 +10,15 @@ import SwiftUI
 struct MissionView: View {
     
     struct CrewMember {
-        let role: String
         let astronaut: Astronaut
+        let role: String
     }
-    
-    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     
     let mission: Mission
     let crew: [CrewMember]
+    
+    /// Challenge 2:
+    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     
     var body: some View {
         GeometryReader { geometry in
@@ -69,7 +70,7 @@ struct MissionView: View {
         
         self.crew = mission.crew.map { member in
             if let astronaut = astronauts[member.name] {
-                return CrewMember(role: member.role, astronaut: astronaut)
+                return CrewMember(astronaut: astronaut, role: member.role)
             } else {
                 fatalError("\(member.name)")
             }

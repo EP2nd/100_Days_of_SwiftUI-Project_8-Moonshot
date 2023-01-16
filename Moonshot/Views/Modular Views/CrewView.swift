@@ -12,8 +12,8 @@ import SwiftUI
 struct CrewView: View {
     
     struct CrewMember {
-        let role: String
         let astronaut: Astronaut
+        let role: String
     }
     
     let mission: Mission
@@ -57,7 +57,7 @@ struct CrewView: View {
         
         self.crew = mission.crew.map { member in
             if let astronaut = astronauts[member.name] {
-                return CrewMember(role: member.role, astronaut: astronaut)
+                return CrewMember(astronaut: astronaut, role: member.role)
             } else {
                 fatalError("\(member.name)")
             }
