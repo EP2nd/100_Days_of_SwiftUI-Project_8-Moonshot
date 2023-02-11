@@ -24,11 +24,14 @@ struct MissionView: View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
-                    Image(mission.image)
+                    /// Project 15, challenge 3:
+                    Image(decorative: mission.image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
+                        .accessibilityElement()
+                        .accessibilityLabel(mission.badge)
                     
                     /// Challenge 1:
                     /* Text(mission.formattedLaunchDate)
@@ -39,10 +42,14 @@ struct MissionView: View {
                     if let date = mission.launchDate {
                         Label(date.formatted(date: .complete, time: .omitted), systemImage: "calendar")
                             .padding(.top)
+                        /// Project 15, challenge 3:
+                            .accessibilityLabel("Mission flew on \(date.formatted(date: .complete, time: .omitted))")
                     } else {
                         Text("N/A")
                             .font(.title.monospacedDigit())
                             .padding(.top)
+                        /// Project 15, challenge 3:
+                            .accessibilityLabel("Mission never flew")
                     }
                     
                     VStack(alignment: .leading) {

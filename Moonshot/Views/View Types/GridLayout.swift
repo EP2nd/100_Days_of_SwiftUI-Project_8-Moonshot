@@ -39,6 +39,8 @@ struct GridLayout: View {
                                 Text(mission.formattedLaunchDate)
                                     .font(.caption)
                                     .foregroundColor(.white.opacity(0.5))
+                                /// Project 15, challenge 3:
+                                    .accessibilityLabel(mission.accessibilityLaunchDate)
                             }
                             .padding()
                             .frame(maxWidth: .infinity)

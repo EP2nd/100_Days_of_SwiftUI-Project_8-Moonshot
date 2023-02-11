@@ -18,6 +18,8 @@ struct Mission: Codable, Identifiable {
     let launchDate: Date?
     let crew: [CrewRole]
     let description: String
+    /// Project 15, challenge 3:
+    let badge: String
     
     var displayName: String {
         "Apollo \(id)"
@@ -29,5 +31,14 @@ struct Mission: Codable, Identifiable {
     
     var formattedLaunchDate: String {
         launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+    }
+    
+    /// Project 15, challenge 3:
+    var accessibilityLaunchDate: String {
+        if let date = launchDate {
+            return "Mission flew on: \(date.formatted(date: .abbreviated, time: .omitted))"
+        } else {
+            return "Mission never flew"
+        }
     }
 }
